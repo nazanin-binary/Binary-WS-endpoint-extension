@@ -13,9 +13,6 @@ chrome.runtime.onInstalled.addListener(() => {
           new chrome.declarativeContent.PageStateMatcher({
             pageUrl: { urlContains: '.github.io/binary-static/' },
           }),
-          new chrome.declarativeContent.PageStateMatcher({
-            pageUrl: { urlContains: 'localhost' },
-          }),
         ],
         // And shows the extension's page action.
         actions: [ new chrome.declarativeContent.ShowPageAction() ]
@@ -25,3 +22,5 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 const select = element => document.querySelector(element);
+
+
