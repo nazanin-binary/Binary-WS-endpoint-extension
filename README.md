@@ -1,16 +1,18 @@
-# endpoint-chrome-extension
-Endpoint for staging.binary.com
+# Binary-WS-endpoint-extension
 
+<b>Note:</b>
+This extension only works on Binary.com platforms.
 
-This chrome extension will add 2 items to localStorage based on loginid, url and app id,
-To be able to use this on binary.com projects you should set these 2 items with names config.app_id and config.server_url in localStorage.
-With this plugin you can shift websocket connection between 'blue' and 'green' servers, and also you can change app id for quality assurance purposes.
+This extension helps you change app id and switch Websocket connection between 'frontend', 'blue' and 'green' and any available servers in Binary platforms for quality assurance purposes. The default server will be 'frontend.binaryws.com' and default_app_id can either be the predefined default_app_id (especific for any of binary's projects) or the app_id you've got after registering your application <a href="https://developers.binary.com/applications/">here</a>. You can reset endpoint to default values anytime via <i>reset</i> button in extension.
+
+This chrome extension will add items to localStorage based on loginid, url and app id, these items are default_app_id, app_id and server_url.
+
+By using this on binary.com projects you set these items with names config.default_app_id, config.app_id and config.server_url in localStorage.
 
 <b>How to work with this project</b></br>
-`git clone git@github.com:nazaninreihani/endpoint-chrome-extension.git` </br>
-`cd endpoint-chrome-extension` </br>
+`git clone git@github.com:binary-com/Binary-WS-endpoint-extension.git` </br>
+`cd Binary-WS-endpoint-extension` </br>
 `npm install` </br>
 
 Go to google chrome's extension manager and enable developer mode, then open this project via <i>load unpacked extension</i>
-the extension must be enabled for developing
-
+the extension must be enabled for developing.
