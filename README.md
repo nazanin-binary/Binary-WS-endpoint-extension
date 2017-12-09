@@ -3,7 +3,7 @@
 <b>Note:</b>
 This extension only works on Binary.com platforms.
 
-This extension helps you change <i>App id</i> and switch Websocket connection between frontend, blue, green and any available servers in Binary platforms for quality assurance purposes. The default server will be 'frontend.binaryws.com' and default_app_id can either be the predefined default_app_id (especific for any of binary's projects) or the app_id you've got after registering your application <a href="https://developers.binary.com/applications/">here</a>. You can reset endpoint to default values anytime via <i>reset</i> button in extension.
+This extension helps you change <i>App id</i> and switch Websocket connection between frontend, blue, green and any available servers in Binary platforms for quality assurance purposes. The default server will be `frontend.binaryws.com` and default_app_id can either be the predefined <i>default app id</i> (especific for any of binary's projects) or the <i>app id</i> you've got after registering your application <a href="https://developers.binary.com/applications/">here</a>. You can reset endpoint to default values anytime via <i>reset</i> button in extension.
 
 This chrome extension will add items to localStorage based on Login id, Url and App id, these items are `default_app_id`, `app_id` and `server_url`.
 
