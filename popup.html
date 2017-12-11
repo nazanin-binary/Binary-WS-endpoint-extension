@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Getting Started Extension's Popup</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="background.js"></script>
+    </head>
+
+    <body>
+    <div class="header">
+        <h1>Binary Endpoint</h1>
+    </div>
+    <div id="container">
+        <div class="content">
+            <h1>Change API Endpoint</h1>
+            <div class="row">
+                <div class="col">
+                    <label for="server-url">Server</label>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input type="text" id="server-url" class="text-input">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="app-id">
+                        OAuth App ID
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="app-id" class="text-input">
+                </div>
+            </div>
+            <div class="row buttons">
+                <div>
+                    <button id="submit" class="submit-button"><span>Submit</span></button>
+                </div>
+                <div>
+                    <button id="reset" class="reset-button">
+                        <span>
+                            Reset To Original Settings
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+    <script src="popup.js"></script>
+</html>

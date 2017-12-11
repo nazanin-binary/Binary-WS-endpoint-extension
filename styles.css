@@ -1,0 +1,95 @@
+body {
+    white-space: nowrap;
+    width: 350px;
+    margin: 0;
+    background: #eeeeee;
+}
+
+h1 {
+    font-size: 15px;
+}
+
+.header {
+    background: #2A3052;
+    width: 100%;
+}
+
+.header > h1 {
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    color: #FFF;
+}
+
+#container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.row, .col {
+    width: 100%;
+}
+
+.text-input {
+    font-size: 14px;
+    margin: 2px;
+    height: 23px;
+    border-radius: 3px;
+    width: 100%;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 12px 20px;
+}
+
+.content {
+    padding: 10px;
+    width: 100%;
+}
+
+.buttons {
+    display: flex;
+}
+
+.submit-button, .reset-button {
+    padding: 0;
+    border: 0;
+    border-radius: 3px;
+    margin: 5px;
+}
+
+.submit-button > span {
+    text-decoration: none;
+    text-align: center;
+    line-height: 100%;
+    text-transform: capitalize;
+    padding: 10px 15px;
+    display: inline-block;
+    font-weight: 400;
+    font-family: inherit;
+    border-radius: 3px;
+    overflow: visible;
+    border: 0;
+    color: #FFF;
+    background: #2E8836;
+}
+
+.reset-button > span {
+    text-decoration: none;
+    text-align: center;
+    line-height: 100%;
+    text-transform: capitalize;
+    padding: 10px;
+    display: inline-block;
+    font-weight: 400;
+    font-family: inherit;
+    border-radius: 3px;
+    overflow: visible;
+    border: 0;
+    color: #000;
+    background: #dedcdc;
+}
