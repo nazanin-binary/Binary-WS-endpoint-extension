@@ -11,7 +11,7 @@ chrome.runtime.onInstalled.addListener(() => {
             pageUrl: { urlMatches: '(staging|www|app|ticktrade|developers|webtrader)\.binary.com' },
           }),
           new chrome.declarativeContent.PageStateMatcher({
-            pageUrl: { urlContains: '.github.io/binary-static/' },
+            pageUrl: { urlMatches: '.github.io/binary-(static|bot)/' },
           }),
         ],
         // And shows the extension's page action.
