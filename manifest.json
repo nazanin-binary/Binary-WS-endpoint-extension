@@ -19,11 +19,11 @@
   },
   "permissions" : [
     "declarativeContent", "storage",
-    "*://*.binary.com/*", "*://*.github.io/binary-static/*", "tabs"
+    "*://*.binary.com/*", "*://*.github.io/binary-static/*", "*://*.binary.sx/*", "tabs"
   ],
   "content_scripts": [
     {
-      "matches": ["*://*.binary.com/*", "*://*.github.io/binary-static/*"],
+      "matches": ["*://*.binary.com/*", "*://*.github.io/binary-static/*", "*://*.binary.sx/*"],
       "js": ["popup.js"]
     }
   ]

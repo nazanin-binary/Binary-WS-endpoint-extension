@@ -13,6 +13,9 @@ chrome.runtime.onInstalled.addListener(() => {
           new chrome.declarativeContent.PageStateMatcher({
             pageUrl: { urlMatches: '.github.io/binary-(static|bot)/' },
           }),
+          new chrome.declarativeContent.PageStateMatcher({
+            pageUrl: { urlMatches: '.binary.sx' },
+          }),
         ],
         // And shows the extension's page action.
         actions: [ new chrome.declarativeContent.ShowPageAction() ]
