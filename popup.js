@@ -35,7 +35,7 @@ const getDefaultAppId = (tabInfo) => {
     return 10;
   } else if (/webtrader\.binary\.com/i.test(tabInfo.url)) {
     return 11;
-  } else if (/www\.binary\.com/i.test(tabInfo.url)) {
+  } else if (/www\.binary\.com/i.test(tabInfo.url) || /.binary\.sx/i.test(tabInfo.url)) {
     return 1;
   }
 }
