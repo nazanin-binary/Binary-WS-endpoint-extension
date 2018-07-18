@@ -29,8 +29,8 @@ const getDefaultAppId = (tabInfo) => {
     return 1098;
   } else if (/developers\.binary\.com/i.test(tabInfo.url)) {
     return 1089;
-  } else if (/app\.binary\.com/i.test(tabInfo.url)) {
-    return 1001;
+  } else if (/bot\.binary\.com/i.test(tabInfo.url)) {
+    return 1069;
   } else if (/ticktrade\.binary\.com/i.test(tabInfo.url)) {
     return 10;
   } else if (/webtrader\.binary\.com/i.test(tabInfo.url)) {
