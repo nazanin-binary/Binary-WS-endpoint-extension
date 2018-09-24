@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     select('#submit').addEventListener('click', () => {
       const appId = select('#app-id').value;
-      const serverUrl = select('#server-url').value;
+      const serverUrl = getFullyQualifiedDomain(select('#server-url').value);
       submitNewValues(appId, serverUrl);
     });
   }
@@ -116,3 +116,17 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(err)
   }
 });
+
+function getFullyQualifiedDomain(url) {
+    const fqdn = url.toLowerCase().match(/(?:\w+:\/\/)?([.\w]*)/)[1];
+
+    if(!fqdn) throw Error(`${url} is not a valid url`);
+
+    const urlParts = fqdn.match(/\.?([\w]+)\.?/g);
+
+    if (urlParts.length < 2) throw Error(`${fqdn} is not a valid domain`);
+
+    if (urlParts.length === 2) urlParts.unshift('www.');
+
+    return urlParts.join('');
+}
