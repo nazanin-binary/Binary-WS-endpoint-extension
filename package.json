@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nazaninreihani/endpoint-chrome-extension.git"
+    "url": "git+https://github.com/binary-com/endpoint-chrome-extension.git"
   },
   "author": "Nazanin Reihani Haghighi",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nazaninreihani/endpoint-chrome-extension/issues"
+    "url": "https://github.com/binary-com/endpoint-chrome-extension/issues"
   },
-  "homepage": "https://github.com/nazaninreihani/endpoint-chrome-extension#readme",
+  "homepage": "https://github.com/binary-com/endpoint-chrome-extension#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1"
