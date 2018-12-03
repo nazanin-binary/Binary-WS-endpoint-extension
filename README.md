@@ -12,5 +12,4 @@ By using this extension on binary.com projects you set these items with names `c
 `cd Binary-WS-endpoint-extension` </br>
 `npm install` </br>
 
-Go to google chrome's extension manager and enable developer mode, then open this project via <i>load unpacked extension</i>
-the extension must be enabled for developing.
+Go to google Chrome's extension manager and enable developer mode, then open this project via <i>load unpacked extension</i> (select the Binary-WS-endpoint-extension folder) the extension must be enabled for developing.
