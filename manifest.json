@@ -19,7 +19,8 @@
   },
   "permissions" : [
     "declarativeContent", "storage",
-    "*://*.binary.com/*", "*://*.github.io/binary-static/*", "*://*.binary.sx/*", "tabs"
+    "*://*.binary.com/*", "*://*.github.io/binary-static/*", "*://*.binary.sx/*", "tabs",
+    "*://binary.bot/*", "*://*.binary.me/*"
   ],
   "content_scripts": [
     {
