@@ -31,12 +31,18 @@ const getDefaultAppId = (tabInfo) => {
     return 1089;
   } else if (/bot\.binary\.com/i.test(tabInfo.url)) {
     return 1069;
+  } else if (/bot\.binary\.me/i.test(tabInfo.url)) {
+    return 15438;
+  } else if (/binary\.bot/i.test(tabInfo.url)) {
+    return 15481;
   } else if (/ticktrade\.binary\.com/i.test(tabInfo.url)) {
     return 10;
   } else if (/webtrader\.binary\.com/i.test(tabInfo.url)) {
     return 11;
   } else if (/www\.binary\.com/i.test(tabInfo.url) || /.binary\.sx/i.test(tabInfo.url)) {
     return 1;
+  } else if (/www\.binary\.me/i.test(tabInfo.url)) {
+    return 15284;
   } else if (/charts\.binary\.com/i.test(tabInfo.url)) {
     return 12812;
   }
