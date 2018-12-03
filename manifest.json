@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Binary endpoint",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Change API Endpoint of Binary.com",
   "author": "Nazanin Reihani Haghighi",
   "background": {
@@ -19,7 +19,8 @@
   },
   "permissions" : [
     "declarativeContent", "storage",
-    "*://*.binary.com/*", "*://*.github.io/binary-static/*", "*://*.binary.sx/*", "tabs"
+    "*://*.binary.com/*", "*://*.github.io/binary-static/*", "*://*.binary.sx/*", "tabs",
+    "*://binary.bot/*", "*://*.binary.me/*"
   ],
   "content_scripts": [
     {
