@@ -11,7 +11,7 @@ chrome.runtime.onInstalled.addListener(() => {
             pageUrl: { urlMatches: '(staging|www|bot|charts|ticktrade|developers|webtrader)\.binary.com' },
           }),
           new chrome.declarativeContent.PageStateMatcher({
-            pageUrl: { urlMatches: '(staging|www|bot|charts|ticktrade|webtrader)\.binary.me' },
+            pageUrl: { urlMatches: '(www|bot|charts|ticktrade|webtrader)\.binary.me' },
           }),
           new chrome.declarativeContent.PageStateMatcher({
             pageUrl: { urlMatches: '.github.io/binary-(static|bot)/' },
@@ -20,7 +20,7 @@ chrome.runtime.onInstalled.addListener(() => {
             pageUrl: { urlMatches: '.binary.sx' },
           }),
           new chrome.declarativeContent.PageStateMatcher({
-            pageUrl: { urlMatches: '.binary.bot' },
+            pageUrl: { urlMatches: 'binary.bot' },
           }),
         ],
         // And shows the extension's page action.
