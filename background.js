@@ -5,16 +5,22 @@ chrome.runtime.onInstalled.addListener(() => {
     // With a new rule ...
     chrome.declarativeContent.onPageChanged.addRules([
       {
-        // That fires when a page's URL contains a '.binary.com' ...
+        // That fires when a page's URL contains a pattern listed below ...
         conditions: [
           new chrome.declarativeContent.PageStateMatcher({
             pageUrl: { urlMatches: '(staging|www|bot|charts|ticktrade|developers|webtrader)\.binary.com' },
+          }),
+          new chrome.declarativeContent.PageStateMatcher({
+            pageUrl: { urlMatches: '(staging|www|bot|charts|ticktrade|webtrader)\.binary.me' },
           }),
           new chrome.declarativeContent.PageStateMatcher({
             pageUrl: { urlMatches: '.github.io/binary-(static|bot)/' },
           }),
           new chrome.declarativeContent.PageStateMatcher({
             pageUrl: { urlMatches: '.binary.sx' },
+          }),
+          new chrome.declarativeContent.PageStateMatcher({
+            pageUrl: { urlMatches: '.binary.bot' },
           }),
         ],
         // And shows the extension's page action.
