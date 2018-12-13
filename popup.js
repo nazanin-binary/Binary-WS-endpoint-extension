@@ -72,7 +72,7 @@ async function submitNewValues(appId, serverUrl) {
   executeOnTab(tabInfo.id, setAppIdScript);
   executeOnTab(tabInfo.id, setServerUrlScript);
   chrome.tabs.update(tabInfo.id, {url: tabInfo.url});
-}
+};
 
 async function calculateDefault() {
   const tabInfo = await getTabInfo();
@@ -103,7 +103,63 @@ async function init() {
   } else {
     calculateDefault();
   }
+  const branchInStorage = await executeOnTab(tabInfo.id, 'localStorage.getItem("config.branch")')[0];
+  const currentBranch = branchInStorage != null ? branchInStorage : getBranch(tabInfo);
+  select('#branch').value = currentBranch;
+  const setBranchInStorageString = `localStorage.setItem("config.branch", ${branch})`;
+  executeOnTab(tabInfo.id, setBranchInStorageString);
 };
+
+// Branch
+const getPathArray = (tabInfo) => {
+  const url = tabInfo.url;
+  return url.split('/')
+};
+
+const getBranch = (tabInfo) => {
+  let branch = '';
+  const pathArray = getPathArray(tabInfo);
+  pathArray.forEach(path => {
+    if (path.startsWith('br_')) {
+      branch = path;
+    }
+  });
+  return branch;
+};
+
+async function submitNewBranch(branch) {
+  const tabInfo = await getTabInfo();
+  branch.replace('/', '');
+  let newUrl = '';
+  const currentBranch = await executeOnTab(tabInfo.id, 'localStorage.getItem("config.branch")');
+  if (currentBranch[0] != null && currentBranch !== branch) {
+    const pathArray = getPathArray(tabInfo);
+    pathArray.forEach((path, idx) => {
+      if(path.startsWith('br_')) {
+        newUrl += branch + (branch.length ? "/" : '');
+        console.log(idx);
+      } else {
+        if (/github.io/.test(path) || /.sx/.test(path)) {
+          newUrl += path + "/" + (branch.length ? branch + '/' : '');
+        } else {
+          newUrl += path + "/";
+        }
+      }
+    });
+    const setBranchInStorageString = `localStorage.setItem("config.branch", ${branch})`;
+    executeOnTab(tabInfo.id, setBranchInStorageString);
+    chrome.tabs.update(tabInfo.id, {url: newUrl});
+    return tabInfo;
+  }
+};
+
+async function clearBranch() {
+  const branch = '';
+  select('#branch').value = branch;
+  submitNewBranch(branch);
+};
+
+//
 
 document.addEventListener('DOMContentLoaded', () => {
   try {
@@ -116,6 +172,17 @@ document.addEventListener('DOMContentLoaded', () => {
       const serverUrl = getFullyQualifiedDomain(select('#server-url').value);
       submitNewValues(appId, serverUrl);
     });
+
+    select('#clear-branch').addEventListener('click', () => {
+        clearBranch();
+    });
+    select('#submit-branch').addEventListener('click', () => {
+        const branch = select('#branch').value;
+        submitNewBranch(branch);
+    });
+
+  //  TODO: hide branch
+
   }
 
   catch(err) {
