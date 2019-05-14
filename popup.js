@@ -45,6 +45,8 @@ const getDefaultAppId = (tabInfo) => {
     return 15284;
   } else if (/charts\.binary\.com/i.test(tabInfo.url)) {
     return 12812;
+  } else if (/deriv\.app/i.test(tabInfo.url)) {
+    return /staging\.deriv\.app/i.test(tabInfo.url) ? 16303 : 16929;
   }
 }
 
