@@ -47,6 +47,8 @@ const getDefaultAppId = (tabInfo) => {
     return 12812;
   } else if (/deriv\.app/i.test(tabInfo.url)) {
     return /staging\.deriv\.app/i.test(tabInfo.url) ? 16303 : 16929;
+  } else if (/deriv\.com/i.test(tabInfo.url)) {
+    return 11780;
   }
 }
 

@@ -20,11 +20,11 @@
   "permissions" : [
     "declarativeContent", "storage",
     "*://*.binary.com/*", "*://*.github.io/binary-static/*", "*://*.binary.sx/*", "tabs",
-    "*://binary.bot/*", "*://*.binary.me/*", "*://*.deriv.app/*", "*://*.github.io/deriv-app/*"
+    "*://binary.bot/*", "*://*.binary.me/*", "*://*.deriv.app/*", "*://*.github.io/deriv-app/*", "*://*.deriv.com/*"
   ],
   "content_scripts": [
     {
-      "matches": ["*://*.binary.com/*", "*://*.github.io/binary-static/*", "*://*.binary.sx/*", "*://*.deriv.app/*", "*://*.github.io/deriv-app/*"],
+      "matches": ["*://*.binary.com/*", "*://*.github.io/binary-static/*", "*://*.binary.sx/*", "*://*.deriv.app/*", "*://*.github.io/deriv-app/*", "*://*.deriv.com/*"],
       "js": ["popup.js"]
     }
   ]
